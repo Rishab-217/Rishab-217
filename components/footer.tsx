@@ -20,8 +20,7 @@ export function Footer() {
             <h4 className="text-white font-semibold">Event Details</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>📅 Sunday, 19 July 2026</li>
-              <li>📍 PGIMER Chandigarh</li>
-              <li>🏥 Advanced Pediatric Centre Auditorium</li>
+              <li>📍 PGIMER Chandigarh, India</li>
             </ul>
           </div>
 

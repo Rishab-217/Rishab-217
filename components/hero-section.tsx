@@ -1,6 +1,7 @@
 'use client';
 
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 export function HeroSection() {
   const scrollToRegistration = () => {
@@ -9,22 +10,24 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A1628] via-[#0F1E35] to-[#1A2F4A] px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20260308_135631_041-tvjjuBdnAnpAZmSZKBLeF7YPmr7V2W.jpg"
+          alt="RehabX AI Conference Background"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/85 via-[#0A1628]/75 to-[#0A1628]/90" />
+      </div>
+
       {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20 z-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
       </div>
-
-      {/* Tech network lines */}
-      <svg className="absolute inset-0 w-full h-full opacity-10" preserveAspectRatio="none">
-        <defs>
-          <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1A6FBF" strokeWidth="0.5" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </svg>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
@@ -57,8 +60,7 @@ export function HeroSection() {
           </div>
           <div className="bg-blue-900/30 border border-blue-400/30 rounded-lg p-4 backdrop-blur-sm">
             <p className="text-gray-400 text-sm mb-1">📍 Venue</p>
-            <p className="text-white font-semibold">PGIMER Chandigarh</p>
-            <p className="text-gray-300 text-sm">Advanced Pediatric Centre Auditorium</p>
+            <p className="text-white font-semibold">PGIMER Chandigarh, India</p>
           </div>
         </div>
 
